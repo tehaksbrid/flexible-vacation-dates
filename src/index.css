@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI Light';
+    overflow-y:hidden;
+}
+
+.nav {
+    display:flex;
+    flex-align:flex-start;
+}
+
+.nav-item {
+    color:lightgray;
+    position:sticky;
+    position: -webkit-sticky;
+    margin: 0 10px;
+    top:0;
+}
+
+.trip-details {
+    height: 90vh;
+    font-size:48px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5vw;
+}
+
+span[contenteditable=true] {
+    border-bottom: 2px solid rgba(240, 240, 240, 0.8);
+    border-radius:2px;
+    outline:none;
+}
+
+.search-trips {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:24px;
+    cursor:pointer;
+    background-color:transparent;
+    border: none;
+    font-family: 'Segoe UI';
+    color:black;
+    font-weight:100;
+    outline:none;
+}
+
+.arrow {
+    display:inline-block;
+    transition: all 0.5s ease-out;
+    transform-origin: center center;
+    margin:0 10px;
+    color:darkslategrey;
+    position: relative;
+    top:2px;
+    color:darkslategray;
+}
+
+.search-trips:hover > .arrow {
+    animation: bounce;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 0.2s;
+}
+
+.search-trips:focus > .arrow {
+    animation: spin;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 0.4s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(2px);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(180deg);
+    }
+}
